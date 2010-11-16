@@ -69,15 +69,15 @@ body {
     <form action="index.php" method="post" name="calculator">
 	<div>
     	<label for="currentsection">Current Kindle section</label>
-    	<input name="currentsection" id="currentsection" type="text" size="10">
+    	<input name="currentsection" id="currentsection" type="text" size="10" value="<?php echo htmlentities( $_POST['currentsection'] ) ?>">
     </div>
 	<div>
     	<label for="totalsections">Total Kindle sections</label>
-    	<input name="totalsections" id="totalsections" type="text" size="10">
+    	<input name="totalsections" id="totalsections" type="text" size="10" value="<?php echo htmlentities( $_POST['totalsections'] ) ?>">
     </div>
 	<div>
     	<label for="totalpages">Total pages in print</label>
-    	<input name="totalpages" id="totalpages" type="text" size="10">
+    	<input name="totalpages" id="totalpages" type="text" size="10" value="<?php echo htmlentities( $_POST['totalpages'] ) ?>">
     </div>
     <div>
     	<input type="submit" name="submit" id="submit" value="calculate">
