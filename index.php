@@ -46,6 +46,21 @@ body {
 	margin: 0;
 	padding: 10px 0;
 }
+
+#calculator label {
+	width: 200px;
+	display: block;
+	float: left;
+}
+
+#calculator input {
+	float: left;
+}
+
+#calculator div {
+	clear: both;
+}
+
 -->
 </style></head>
 
@@ -61,18 +76,18 @@ body {
     <p>To overcome this issue, I have created a very rough calculator to equate your Kindle position with a real page number. The reason I say rough is because the printed edition may not have the exact same content or layout as the Kindle edition. If you can accept these inherent limitations, you may find this tool useful.</p>
     <p>My basic math is as follows: (Kindle position / Total Kindle sections) * number of pages in printed edition</p>
     <h2>Calculator</h2>
-    <form action="index.php" method="post" name="calculator">
+    <form action="index.php" method="post" name="calculator" id="calculator">
 	<div>
     	<label for="currentsection">Current Kindle section</label>
-    	<input name="currentsection" id="currentsection" type="text" size="10">
+    	<input name="currentsection" id="currentsection" type="text" size="10" value="<?php echo htmlentities( $_POST['currentsection'] ) ?>">
     </div>
 	<div>
     	<label for="totalsections">Total Kindle sections</label>
-    	<input name="totalsections" id="totalsections" type="text" size="10">
+    	<input name="totalsections" id="totalsections" type="text" size="10" value="<?php echo htmlentities( $_POST['totalsections'] ) ?>">
     </div>
 	<div>
     	<label for="totalpages">Total pages in print</label>
-    	<input name="totalpages" id="totalpages" type="text" size="10">
+    	<input name="totalpages" id="totalpages" type="text" size="10" value="<?php echo htmlentities( $_POST['totalpages'] ) ?>">
     </div>
     <div>
     	<input type="submit" name="submit" id="submit" value="calculate">
