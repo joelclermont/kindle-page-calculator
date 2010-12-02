@@ -1,4 +1,7 @@
 <?php
+//setup Google Analytics
+$GA_ID = 'UA-97993-5';
+
 if ($_POST['submit']) {
 	@$pageNum = round((int)$_POST['currentsection'] / (int)$_POST['totalsections'] * (int)$_POST['totalpages']);
 }
@@ -122,7 +125,7 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 </script>
 <script type="text/javascript">
 try {
-var pageTracker = _gat._getTracker("UA-97993-5");
+var pageTracker = _gat._getTracker("<?php echo $GA_ID; ?>");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 </body>
